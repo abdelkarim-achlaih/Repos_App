@@ -1,0 +1,90 @@
+/* Start Variables */
+/* End Variables */
+/* Start Global Rules */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* End Global Rules */
+/* Start Components */
+/* End Components */
+/* Start Header */
+header {
+  min-width: 72px;
+}
+header svg {
+  color: #c9510c;
+  font-size: 60px;
+  transition: 0.4s;
+}
+header svg:hover {
+  color: #15ded4;
+}
+
+/* End Header */
+/* Start Land */
+.hero {
+  height: 100vh;
+  overflow: hidden;
+}
+.hero .video-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  background-color: #161616;
+}
+.hero .video-container video {
+  height: 100%;
+  width: 177.7777777778vh;
+  min-width: 100%;
+  min-height: 56.25vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
+  padding: 0;
+}
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(135deg, rgba(21, 222, 212, 0.3882352941) 50%, rgba(21, 222, 212, 0.0117647059) 100%);
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+.hero-content .content p:first-child {
+  color: #c9510c;
+}
+.hero-content .content span {
+  color: #15ded4;
+}
+.hero-content .content h1 {
+  font-size: 3rem;
+}/*# sourceMappingURL=main.css.map */
