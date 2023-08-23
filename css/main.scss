@@ -71,6 +71,29 @@ header {
 		}
 	}
 
+	.scroll {
+		position: absolute;
+		left: 50%;
+		animation: scroll infinite .5s alternate-reverse;
+		transform: translateX(-50%);
+		z-index: 3;
+		cursor: pointer;
+
+		svg {
+			color: $brand;
+			font-size: 30px;
+		}
+	}
+}
+
+@keyframes scroll {
+	from {
+		bottom: 30px;
+	}
+
+	to {
+		bottom: 10px;
+	}
 }
 
 .overlay {

@@ -51,7 +51,27 @@ header svg:hover {
   transform: translate(-50%, -50%);
   z-index: 2;
 }
+.hero .scroll {
+  position: absolute;
+  left: 50%;
+  animation: scroll infinite 0.5s alternate-reverse;
+  transform: translateX(-50%);
+  z-index: 3;
+  cursor: pointer;
+}
+.hero .scroll svg {
+  color: #c9510c;
+  font-size: 30px;
+}
 
+@keyframes scroll {
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: 10px;
+  }
+}
 .overlay {
   display: block;
   position: absolute;
