@@ -4,6 +4,7 @@ $main: #15ded4;
 $second: #7b2049;
 $back1: #161616;
 $back2: #111111;
+$back3: #1d1d1d;
 $brand: #c9510c;
 $dark: #110b37;
 $duration: 0.4s;
@@ -140,27 +141,57 @@ header {
 }
 
 
-// @media (max-width: 991px) {
-// 	header {
-// 		margin-bottom: 50px;
-// 	}
+@media (max-width: 991px) {
+	.hero-content {
+		h1 {
+			font-size: 20px !important;
+		}
 
-// 	.land {
-// 		height: auto;
+		p:last-child {
+			font-size: 13px !important;
+		}
+	}
 
-// 		.img-holder {
-// 			width: 100%;
-// 		}
-// 	}
+}
 
-// 	.overlay {
-// 		height: 100%;
-// 	}
+/* End Land */
+/* Start Stats */
+.stats {
+	position: absolute;
+	z-index: 400;
+	bottom: 0;
+	right: 100px;
+	transform: translateY(50%);
 
-// }
+	.stats-holder {
+		display: flex;
+		border-radius: 5px;
+		background-color: $back3;
+		width: fit-content;
 
-// /* End Land */
-// /* Start Instructions */
+		.stat {
+			h5 {
+				color: $main;
+				margin: 0;
+			}
+
+			p {
+				font-size: 10px;
+				margin: 0;
+			}
+		}
+	}
+}
+
+/* End Stats */
+/* Start Features */
+.features {
+	background-color: $back2;
+	padding-top: 100px;
+}
+
+/* End Features */
+
 // .instructions {
 // 	background-color: $dark;
 // 	overflow: hidden;

@@ -107,4 +107,46 @@ header svg:hover {
 }
 .hero-content .content h1 {
   font-size: 3rem;
-}/*# sourceMappingURL=main.css.map */
+}
+
+@media (max-width: 991px) {
+  .hero-content h1 {
+    font-size: 20px !important;
+  }
+  .hero-content p:last-child {
+    font-size: 13px !important;
+  }
+}
+/* End Land */
+/* Start Stats */
+.stats {
+  position: absolute;
+  z-index: 400;
+  bottom: 0;
+  right: 100px;
+  transform: translateY(50%);
+}
+.stats .stats-holder {
+  display: flex;
+  border-radius: 5px;
+  background-color: #1d1d1d;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.stats .stats-holder .stat h5 {
+  color: #15ded4;
+  margin: 0;
+}
+.stats .stats-holder .stat p {
+  font-size: 10px;
+  margin: 0;
+}
+
+/* End Stats */
+/* Start Features */
+.features {
+  background-color: #111111;
+  padding-top: 100px;
+}
+
+/* End Features *//*# sourceMappingURL=main.css.map */
