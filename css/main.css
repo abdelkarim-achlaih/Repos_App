@@ -72,6 +72,14 @@ header svg:hover {
     bottom: 10px;
   }
 }
+@keyframes scroll-mobile {
+  from {
+    bottom: 70px;
+  }
+  to {
+    bottom: 40px;
+  }
+}
 .overlay {
   display: block;
   position: absolute;
@@ -111,10 +119,13 @@ header svg:hover {
 
 @media (max-width: 991px) {
   .hero-content h1 {
-    font-size: 15px !important;
+    font-size: 20px !important;
   }
   .hero-content p:last-child {
     font-size: 12px !important;
+  }
+  .scroll {
+    animation: scroll-mobile infinite 0.5s alternate-reverse !important;
   }
 }
 /* End Land */
@@ -125,6 +136,7 @@ header svg:hover {
   bottom: 0;
   right: 100px;
   transform: translateY(50%);
+  transition: 0.4s;
 }
 .stats .stats-holder {
   display: flex;
@@ -142,11 +154,122 @@ header svg:hover {
   margin: 0;
 }
 
+@media (max-width: 991px) {
+  .stats {
+    right: 50%;
+    transform: translate(50%, 50%);
+  }
+}
 /* End Stats */
 /* Start Features */
 .features {
   background-color: #111111;
   padding-top: 100px;
 }
+.features .feature {
+  background-color: #1d1d1d;
+  transition: 0.4s;
+  margin-bottom: 20px;
+  min-height: 288px;
+}
+.features .feature svg {
+  color: #15ded4;
+  font-size: 50px;
+  transition: 0.4s;
+}
+.features .feature:hover svg {
+  color: #c9510c;
+}
+.features .feature p,
+.features .feature h5 {
+  margin: 0;
+}
+.features .feature p {
+  font-size: 13px;
+}
+.features .feature:hover {
+  transform: scale(1.05);
+}
 
-/* End Features *//*# sourceMappingURL=main.css.map */
+@media (max-width: 991px) {
+  .features .info {
+    width: 100% !important;
+    text-align: center;
+  }
+  .features .feature {
+    min-height: auto;
+  }
+}
+/* End Features */
+/* Start app-name */
+.app-name {
+  background-color: #161616;
+}
+
+/* End app-name */
+/* Start app-input */
+.app-input {
+  background-color: #111111;
+}
+.app-input .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app-input form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+.app-input button {
+  width: 500px;
+  color: white;
+  background-color: #15ded4;
+}
+.app-input button:hover {
+  background-color: #c9510c;
+  color: white;
+}
+
+@media (max-width: 991px) {
+  .app-input form,
+  .app-input button {
+    width: 100%;
+  }
+}
+/* End app-input */
+/* Start app-repos */
+.app-repos {
+  background-color: #161616;
+  background-image: linear-gradient(135deg, rgba(201, 81, 12, 0.1411764706) 50%, rgba(21, 222, 212, 0.168627451) 100%);
+  display: none;
+}
+.app-repos.fetched {
+  display: block;
+}
+.app-repos .owner .avatar {
+  text-align: center;
+}
+.app-repos .owner .avatar img {
+  width: 100px;
+  border-radius: 50%;
+}
+.app-repos .link a {
+  text-decoration-color: #15ded4;
+  color: #c9510c;
+}
+.app-repos .card {
+  margin-bottom: 20px;
+  background-color: #1d1d1d;
+  color: white;
+  transition: 0.4s;
+}
+.app-repos .card:hover {
+  transform: translateY(-10px);
+}
+.app-repos .card svg {
+  color: #15ded4;
+  margin-right: 10px;
+}
+
+/* End app-repos *//*# sourceMappingURL=main.css.map */

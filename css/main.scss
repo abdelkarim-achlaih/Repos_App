@@ -97,6 +97,16 @@ header {
 	}
 }
 
+@keyframes scroll-mobile {
+	from {
+		bottom: 70px;
+	}
+
+	to {
+		bottom: 40px;
+	}
+}
+
 .overlay {
 	display: block;
 	position: absolute;
@@ -144,7 +154,7 @@ header {
 @media (max-width: 991px) {
 	.hero-content {
 		h1 {
-			font-size: 15px !important;
+			font-size: 20px !important;
 		}
 
 		p:last-child {
@@ -152,6 +162,9 @@ header {
 		}
 	}
 
+	.scroll {
+		animation: scroll-mobile infinite .5s alternate-reverse !important;
+	}
 }
 
 /* End Land */
@@ -162,6 +175,7 @@ header {
 	bottom: 0;
 	right: 100px;
 	transform: translateY(50%);
+	transition: $duration;
 
 	.stats-holder {
 		display: flex;
@@ -183,15 +197,154 @@ header {
 	}
 }
 
+@media (max-width: 991px) {
+	.stats {
+		right: 50%;
+		transform: translate(50%, 50%);
+	}
+
+}
+
 /* End Stats */
 /* Start Features */
 .features {
 	background-color: $back2;
 	padding-top: 100px;
+
+	.feature {
+		background-color: $back3;
+		transition: $duration;
+		margin-bottom: 20px;
+		min-height: 288px;
+
+		svg {
+			color: $main;
+			font-size: 50px;
+			transition: $duration;
+		}
+
+		&:hover svg {
+			color: $brand;
+		}
+
+		p,
+		h5 {
+			margin: 0;
+		}
+
+		p {
+			font-size: 13px;
+		}
+
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.features {
+		.info {
+			width: 100% !important;
+			text-align: center;
+		}
+
+		.feature {
+			min-height: auto;
+		}
+	}
+
 }
 
 /* End Features */
+/* Start app-name */
+.app-name {
+	background-color: $back1;
+}
 
+/* End app-name */
+/* Start app-input */
+.app-input {
+	background-color: $back2;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	form {
+		width: 500px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	button {
+		width: 500px;
+		color: white;
+		background-color: $main;
+
+		&:hover {
+			background-color: $brand;
+			color: white;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.app-input {
+
+		form,
+		button {
+			width: 100%;
+		}
+	}
+
+}
+
+/* End app-input */
+/* Start app-repos */
+.app-repos {
+	background-color: $back1;
+	background-image: linear-gradient(135deg, #c9510c24 50%, #15ded42b 100%);
+	display: none;
+	&.fetched {
+		display: block;
+	}
+	.owner {
+		.avatar {
+			text-align: center;
+
+			img {
+				width: 100px;
+				border-radius: 50%;
+			}
+		}
+	}
+
+	.link a {
+		text-decoration-color: $main;
+		color: $brand;
+	}
+
+	.card {
+		margin-bottom: 20px;
+		background-color: $back3;
+		color: white;
+		transition: $duration;
+
+		&:hover {
+			transform: translateY(-10px);
+		}
+
+		svg {
+			color: $main;
+			margin-right: 10px;
+		}
+	}
+}
+
+/* End app-repos */
 // .instructions {
 // 	background-color: $dark;
 // 	overflow: hidden;
