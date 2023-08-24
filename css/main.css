@@ -126,10 +126,10 @@ header svg:hover {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
   }
   .hero-content h1 {
-    font-size: 30px !important;
+    font-size: 20px !important;
   }
   .hero-content p:last-child {
     font-size: 15px !important;
