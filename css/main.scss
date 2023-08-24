@@ -103,7 +103,7 @@ header {
 	}
 
 	to {
-		bottom: 40px;
+		bottom: 52px;
 	}
 }
 
@@ -153,12 +153,22 @@ header {
 
 @media (max-width: 991px) {
 	.hero-content {
+		height: 100%;
+
+		.container {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
 		h1 {
-			font-size: 20px !important;
+			font-size: 30px !important;
 		}
 
 		p:last-child {
-			font-size: 12px !important;
+			font-size: 15px !important;
 		}
 	}
 
@@ -176,6 +186,7 @@ header {
 	right: 100px;
 	transform: translateY(50%);
 	transition: $duration;
+	width: fit-content;
 
 	.stats-holder {
 		display: flex;
@@ -308,9 +319,11 @@ header {
 	background-color: $back1;
 	background-image: linear-gradient(135deg, #c9510c24 50%, #15ded42b 100%);
 	display: none;
+
 	&.fetched {
 		display: block;
 	}
+
 	.owner {
 		.avatar {
 			text-align: center;
